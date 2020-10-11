@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class AddressBookMain {
 
 	public static void main(String[] args) {
+
 		AddressBook addressbook = new AddressBook();
 		Scanner in = new Scanner(System.in);
 		boolean b = false;
