@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class AddressBookTest {
 
-	@Test
+ @Test
     public void firstNameTest() {
         ValidateContact contact = new ValidateContact();
         boolean result = contact.validateFirstName("Aditya");
