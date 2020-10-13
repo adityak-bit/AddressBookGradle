@@ -4,8 +4,9 @@ import java.util.Scanner;
 
 public class AddressBookMain {
 	public static void main(String[] args) {
-         AddressBook addressBook = new AddressBook();
+    AddressBook addressBook = new AddressBook();
 		AddressBookList addressBookList = new AddressBookList();
+
 		Scanner in = new Scanner(System.in);
 		System.out.println("Welcome to Addressbook");
 		int option = 0;
