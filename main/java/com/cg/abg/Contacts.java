@@ -1,9 +1,51 @@
 package com.cg.abg;
 
-public class Contacts {
-	private String firstName, lastName, name, address, city, state, zip, phoneNo, email;
+import com.opencsv.bean.CsvBindByName;
 
+public class Contacts {
+
+	@CsvBindByName
+	private String firstName;
+
+	@CsvBindByName
+	private String lastName;
+	
+	@CsvBindByName
+	private String address;
+	
+	@CsvBindByName
+	private String city;
+	
+	@CsvBindByName
+	private String state;
+	
+	@CsvBindByName
+	private String zip;
+	
+
+	@CsvBindByName(column = "PhoneNumber")
+	private String phoneNo;
+	
+	@CsvBindByName
+	private String email;
+	
 	ValidateContact validateContact = new ValidateContact();
+
+	public Contacts() {
+
+	}
+
+	public Contacts(String firstName, String lastName, String address, String city, String state, String zip,
+			String phoneNo, String email) {
+		this.setFirstName(firstName);
+		this.setLastName(lastName);
+		this.setAddress(address);
+		this.setCity(city);
+		this.setState(state);
+		this.setZip(zip);
+		this.setPhoneNo(phoneNo);
+		this.setEmail(email);
+	}
 
 	public String getFirstName() {
 		return firstName;
@@ -111,9 +153,8 @@ public class Contacts {
 
 	@Override
 	public String toString() {
-		return "First Name :" + firstName + "\nLast Name :" + lastName + "\nAddress :" + address + "\nCity :" + city
-				+ "\nState :" + state + "\nZip :" + zip + "\nPhone No :" + phoneNo + "\nEmail :" + email;
+		return "FirstName : " + firstName + " LastName : " + lastName + " Address : " + address + " City : " + city
+				+ " State : " + state + " Zip : " + zip + " Phone No : " + phoneNo + " Email : " + email;
 	}
 
 }
-
